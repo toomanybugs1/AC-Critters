@@ -56,7 +56,7 @@ flask run
 ```
 
 ### Usage
-Basic table view of the currently available critters (use in browser):
+Basic table view of the currently available critters (use in browser). Use 'nh' or 'sh' to denote Northern/Southern hemisphere:
 ```
 GET /NewHorizons/<hemisphere>/viewtoday
 ```
