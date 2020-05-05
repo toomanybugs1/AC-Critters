@@ -56,3 +56,48 @@ flask run
 ```
 
 ### Usage
+Basic table view of the currently available critters (use in browser):
+```
+GET /NewHorizons/<hemisphere>/viewtoday
+```
+
+Modify Single Critter (names cannot be changed):
+```
+GET /NewHorizons/fish/<fish_name>
+PUT /NewHorizons/fish/<fish_name>
+DELETE /NewHorizons/fish/<fish_name>
+
+GET /NewHorizons/bug/<bug_name>
+PUT /NewHorizons/bug/<bug_name>
+DELETE /NewHorizons/bug/<bug_name>
+```
+
+Add New Critter:
+```
+POST /NewHorizons/fish
+POST /NewHorizons/bug
+```
+
+Critter Objects:
+```
+{
+	"fish_name" : string,
+	"price" : integer,
+	"rain_only" : boolean,
+	"shadow" : string,
+	"water_body" : string,
+  "hours" : [integer],
+  "nh_months" : [integer],
+  "sh_months" : [integer]
+}
+```
+```
+{
+	"bug_name" : string,
+	"price" : integer,
+	"found_area" : string,
+	"hours" : [integer],
+	"nh_months" : [integer],
+	"sh_months" : [integer]
+}
+```
