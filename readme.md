@@ -81,14 +81,14 @@ POST /NewHorizons/bug
 Critter Objects:
 ```
 {
-	"fish_name" : string,
+ 	"fish_name" : string,
 	"price" : integer,
 	"rain_only" : boolean,
 	"shadow" : string,
 	"water_body" : string,
-  "hours" : [integer],
-  "nh_months" : [integer],
-  "sh_months" : [integer]
+	"hours" : [integer],
+	"nh_months" : [integer],
+	"sh_months" : [integer]
 }
 ```
 ```
