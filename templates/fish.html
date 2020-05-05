@@ -1,0 +1,89 @@
+<!doctype html>
+<html>
+   <head>
+     <style>
+       table.minimalistBlack {
+         border: 2px solid #000000;
+         width: 100%;
+         text-align: left;
+         border-collapse: collapse;
+       }
+       table.minimalistBlack td, table.minimalistBlack th {
+         border: 1px solid #000000;
+         padding: 5px 4px;
+       }
+       table.minimalistBlack tbody td {
+         font-size: 13px;
+       }
+       table.minimalistBlack thead {
+         background: #CFCFCF;
+         background: -moz-linear-gradient(top, #dbdbdb 0%, #d3d3d3 66%, #CFCFCF 100%);
+         background: -webkit-linear-gradient(top, #dbdbdb 0%, #d3d3d3 66%, #CFCFCF 100%);
+         background: linear-gradient(to bottom, #dbdbdb 0%, #d3d3d3 66%, #CFCFCF 100%);
+         border-bottom: 2px solid #000000;
+       }
+       table.minimalistBlack thead th {
+         font-size: 15px;
+         font-weight: bold;
+         color: #000000;
+         text-align: left;
+       }
+       table.minimalistBlack tfoot {
+         font-size: 14px;
+         font-weight: bold;
+         color: #000000;
+         border-top: 2px solid #000000;
+       }
+       table.minimalistBlack tfoot td {
+         font-size: 14px;
+       }
+     </style>
+   </head>
+   <body>
+      <h1>Currently Available Critters</h1>
+      <h2>{{ h_name }} Hemisphere</h2> <br>
+      <h4>Fish</h4>
+      <table border = 1 class="minimalistBlack">
+        <thead>
+           <th>Name</th>
+           <th>Price</th>
+           <th>Shadow Size</th>
+           <th>Location</th>
+           <th>Rain Only</th>
+        </thead>
+         {% for f in fish %}
+            <tr>
+               <td> {{ f["fish_name"] }} </td>
+               <td> {{ f["price"] }} </td>
+               <td> {{ f["shadow"] }} </td>
+               <td> {{ f["water_body"] }} </td>
+               <td>No</td>
+            </tr>
+         {% endfor %}
+         {% for f in fish_rain %}
+            <tr>
+               <td> {{ f["fish_name"] }} </td>
+               <td> {{ f["price"] }} </td>
+               <td> {{ f["shadow"] }} </td>
+               <td> {{ f["water_body"] }} </td>
+               <td>Yes</td>
+            </tr>
+         {% endfor %}
+      </table> <br>
+      <h4>Bugs</h4>
+      <table border = 1 class="minimalistBlack">
+        <thead>
+           <th>Name</th>
+           <th>Price</th>
+           <th>Location</th>
+        </thead>
+         {% for bug in bugs %}
+            <tr>
+               <td> {{ bug["bug_name"] }} </td>
+               <td> {{ bug["price"] }} </td>
+               <td> {{ bug["found_area"] }} </td>
+            </tr>
+         {% endfor %}
+      </table>
+   </body>
+</html>
